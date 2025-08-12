@@ -9,7 +9,8 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private List<string> dialogueSubjects = new List<string>();
     [SerializeField] private List<string> dialogue = new List<string>();
 
-    [SerializeField] private List<UnityEvent> dialogueEvents = new List<UnityEvent>();
+    public List<UnityEvent> dialogueEvents = new List<UnityEvent>();
+    public UnityEvent dialogueFinished;
 
     [SerializeField] private float pauseLength = 0.05f;
 
@@ -20,17 +21,17 @@ public class Dialogue : MonoBehaviour
 
     private int currentDialogueIndex;
 
-    [SerializeField] private GameObject dialogueGameObject;
+    public GameObject dialogueGameObject;
 
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI subjectText;
     [SerializeField] private GameObject proceedIndicator;
 
-    private bool isDialogueActive;
+    public bool isDialogueActive;
     private bool isDialoguePlaying;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (dialogueSubjects.Count != dialogue.Count)
         {
@@ -66,6 +67,8 @@ public class Dialogue : MonoBehaviour
                 {
                     dialogueGameObject.SetActive(false);
                     isDialogueActive = false;
+
+                    dialogueFinished.Invoke();
                 }
                 else
                 {
@@ -111,7 +114,7 @@ public class Dialogue : MonoBehaviour
 
         proceedIndicator.SetActive(false);
 
-        while (isDialoguePlaying && dialogueCharIndex < currentDialogue.Length)
+        while (isDialoguePlaying && isDialogueActive && dialogueCharIndex < currentDialogue.Length)
         {
             string character = currentDialogue.Substring(dialogueCharIndex, 1);
             text += character;
