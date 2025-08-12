@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 326315882}
   - component: {fileID: 326315881}
   - component: {fileID: 326315880}
+  - component: {fileID: 326315883}
   m_Layer: 0
   m_Name: Abstraction
   m_TagString: Untagged
@@ -496,6 +497,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326315878}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &326315883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326315878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc2294d4dfda474098efa158d703202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 2
 --- !u!1 &387984375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8162680554289522717, guid: e74294c8317066c4186530c7d6d7e54b, type: 3}
@@ -531,6 +545,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startedInitialDialogue: 0
+  finishedAbstraction: 0
+  finishedInheritance: 0
+  finishedPolymorphism: 0
+  finishedEncapsulation: 0
 --- !u!4 &494761232
 Transform:
   m_ObjectHideFlags: 0
@@ -569,6 +587,7 @@ GameObject:
   - component: {fileID: 610218070}
   - component: {fileID: 610218069}
   - component: {fileID: 610218068}
+  - component: {fileID: 610218071}
   m_Layer: 0
   m_Name: Polymorphism
   m_TagString: Untagged
@@ -666,6 +685,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610218066}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &610218071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610218066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc2294d4dfda474098efa158d703202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 4
 --- !u!1 &755831549
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +943,7 @@ GameObject:
   - component: {fileID: 1073062167}
   - component: {fileID: 1073062166}
   - component: {fileID: 1073062165}
+  - component: {fileID: 1073062168}
   m_Layer: 0
   m_Name: Encapsulation
   m_TagString: Untagged
@@ -1008,6 +1041,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073062163}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1073062168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073062163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc2294d4dfda474098efa158d703202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 5
 --- !u!114 &1185600296 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5113140912676597368, guid: e75705c5a54a6b244b651e08827a39ee, type: 3}
@@ -1498,6 +1544,7 @@ GameObject:
   - component: {fileID: 1563814875}
   - component: {fileID: 1563814874}
   - component: {fileID: 1563814873}
+  - component: {fileID: 1563814876}
   m_Layer: 0
   m_Name: Inheritance
   m_TagString: Untagged
@@ -1595,6 +1642,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563814871}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1563814876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563814871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc2294d4dfda474098efa158d703202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 3
 --- !u!1 &1721847810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7732687479978492690, guid: e75705c5a54a6b244b651e08827a39ee, type: 3}
@@ -2313,7 +2373,7 @@ SceneRoots:
   - {fileID: 1982329678}
   - {fileID: 748136355313745673}
   - {fileID: 1984602442}
-  - {fileID: 494761232}
   - {fileID: 281487946}
   - {fileID: 7097705502099364444}
   - {fileID: 1555231136}
+  - {fileID: 494761232}

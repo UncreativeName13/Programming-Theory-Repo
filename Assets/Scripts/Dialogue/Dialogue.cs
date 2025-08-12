@@ -90,6 +90,8 @@ public class Dialogue : MonoBehaviour
 
     void AddEvents()
     {
+        if (dialogue.Count == dialogueEvents.Count) return;
+
         foreach (string _ in dialogue)
         {
             dialogueEvents.Add(new UnityEvent());

@@ -31,12 +31,12 @@ public class DialogueStart : MonoBehaviour
             dialogue.dialogueGameObject.SetActive(false);
 
             dialogue.gameObject.SetActive(false);
-        }
-    }
 
-    void OnEnable()
-    {
-        dialogue.dialogueEvents[0].AddListener(CoudeRotate1);
+            return;
+        }
+
+        CoudeRotate1();
+
         dialogue.dialogueEvents[1].AddListener(CoudeRotate2);
         dialogue.dialogueEvents[2].AddListener(CoudeRotate3);
 

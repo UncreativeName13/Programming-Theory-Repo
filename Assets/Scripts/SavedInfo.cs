@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SavedInfo : MonoBehaviour
 {
-    // ENCAPSULATION (i think)
+    // ENCAPSULATION
     public static SavedInfo Instance
     {
         get;
@@ -12,6 +12,11 @@ public class SavedInfo : MonoBehaviour
     }
 
     public bool startedInitialDialogue = false;
+
+    public bool finishedAbstraction = false;
+    public bool finishedInheritance = false;
+    public bool finishedPolymorphism = false;
+    public bool finishedEncapsulation = false;
 
     void Awake()
     {
